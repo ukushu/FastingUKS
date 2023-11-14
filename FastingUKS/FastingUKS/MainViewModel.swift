@@ -1,7 +1,10 @@
 import Foundation
+import MoreSwiftUI
 
 class MainViewModel: ObservableObject {
     static let shared = MainViewModel()
+    
+    @Published var sheet = SheetDialogType.none
     
     @Published var progress: Double = 0.0
     @Published var fastingType: FastingType = .Eating

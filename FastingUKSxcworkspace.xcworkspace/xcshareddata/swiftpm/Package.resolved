@@ -1,0 +1,23 @@
+{
+  "pins" : [
+    {
+      "identity" : "essentials",
+      "kind" : "remoteSourceControl",
+      "location" : "https://gitlab.com/sergiy.vynnychenko/essentials.git",
+      "state" : {
+        "branch" : "master",
+        "revision" : "3ecdcda8e14d28bd2f80b7909616c19747494046"
+      }
+    },
+    {
+      "identity" : "moreswiftui",
+      "kind" : "remoteSourceControl",
+      "location" : "git@gitlab.com:UKS/moreswiftui.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "6156b1dd511487565ca84ba0d6f4d8409efcddfc"
+      }
+    }
+  ],
+  "version" : 2
+}
