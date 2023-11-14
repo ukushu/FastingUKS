@@ -1,8 +1,11 @@
 import SwiftUI
 import MoreSwiftUI
+import Essentials
 
 struct MainView: View {
     @ObservedObject var model = MainViewModel.shared
+    
+    let timer = TimerPublisher(every: 2)
     
     var body: some View {
         VStack {
@@ -14,6 +17,7 @@ struct MainView: View {
         .makeFullyIntaractable()
         .gesture( TapGesture(count: 2).onEnded { twoTaps() } )
         .sheet(sheet: model.sheet)
+        .onReceive(timer) { _ in model.objectWillChange.send() }
     }
 }
 
