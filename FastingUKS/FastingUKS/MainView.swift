@@ -19,7 +19,7 @@ struct MainView: View {
 
 extension MainView {
     func twoTaps() {
-        let view = AnyView(Text("asdf").padding() )
+        let view = AnyView( EditFastingView() )
         
         model.sheet = .view(view: view)
     }
