@@ -13,6 +13,7 @@
 		1DC50F362B030D7400A35F6A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1DC50F352B030D7400A35F6A /* Preview Assets.xcassets */; };
 		1DC50F3D2B030FC400A35F6A /* FastingProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC50F3C2B030FC400A35F6A /* FastingProgressView.swift */; };
 		1DC50F3F2B03139F00A35F6A /* FastingPeriodPlate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC50F3E2B03139F00A35F6A /* FastingPeriodPlate.swift */; };
+		1DC50F432B03199600A35F6A /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC50F422B03199600A35F6A /* MainViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		1DC50F352B030D7400A35F6A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1DC50F3C2B030FC400A35F6A /* FastingProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastingProgressView.swift; sourceTree = "<group>"; };
 		1DC50F3E2B03139F00A35F6A /* FastingPeriodPlate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastingPeriodPlate.swift; sourceTree = "<group>"; };
+		1DC50F422B03199600A35F6A /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,11 +60,11 @@
 			children = (
 				1DC50F2D2B030D7300A35F6A /* FastingUKSApp.swift */,
 				1DC50F2F2B030D7300A35F6A /* MainView.swift */,
+				1DC50F422B03199600A35F6A /* MainViewModel.swift */,
+				1DC50F402B03196000A35F6A /* SwiftUI */,
 				1DC50F312B030D7400A35F6A /* Assets.xcassets */,
 				1DC50F332B030D7400A35F6A /* FastingUKS.entitlements */,
 				1DC50F342B030D7400A35F6A /* Preview Content */,
-				1DC50F3C2B030FC400A35F6A /* FastingProgressView.swift */,
-				1DC50F3E2B03139F00A35F6A /* FastingPeriodPlate.swift */,
 			);
 			path = FastingUKS;
 			sourceTree = "<group>";
@@ -73,6 +75,23 @@
 				1DC50F352B030D7400A35F6A /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		1DC50F402B03196000A35F6A /* SwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+				1DC50F412B03197A00A35F6A /* Views */,
+			);
+			path = SwiftUI;
+			sourceTree = "<group>";
+		};
+		1DC50F412B03197A00A35F6A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1DC50F3C2B030FC400A35F6A /* FastingProgressView.swift */,
+				1DC50F3E2B03139F00A35F6A /* FastingPeriodPlate.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -145,6 +164,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1DC50F432B03199600A35F6A /* MainViewModel.swift in Sources */,
 				1DC50F3F2B03139F00A35F6A /* FastingPeriodPlate.swift in Sources */,
 				1DC50F302B030D7300A35F6A /* MainView.swift in Sources */,
 				1DC50F3D2B030FC400A35F6A /* FastingProgressView.swift in Sources */,
