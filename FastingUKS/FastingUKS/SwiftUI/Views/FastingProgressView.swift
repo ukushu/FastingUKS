@@ -22,6 +22,7 @@ struct CircularProgressView: View {
                     color.opacity(0.5),
                     lineWidth: 30
                 )
+                .modifier(GlowModifier(radius: 10, duration: 1.5))
             
             Circle()
                 .trim(from: 0, to: progress)

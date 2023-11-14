@@ -14,6 +14,7 @@
 		1DC50F3D2B030FC400A35F6A /* FastingProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC50F3C2B030FC400A35F6A /* FastingProgressView.swift */; };
 		1DC50F3F2B03139F00A35F6A /* FastingPeriodPlate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC50F3E2B03139F00A35F6A /* FastingPeriodPlate.swift */; };
 		1DC50F432B03199600A35F6A /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC50F422B03199600A35F6A /* MainViewModel.swift */; };
+		1DC50F462B0322F700A35F6A /* GlowModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC50F452B0322F700A35F6A /* GlowModifier.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		1DC50F3C2B030FC400A35F6A /* FastingProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastingProgressView.swift; sourceTree = "<group>"; };
 		1DC50F3E2B03139F00A35F6A /* FastingPeriodPlate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastingPeriodPlate.swift; sourceTree = "<group>"; };
 		1DC50F422B03199600A35F6A /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		1DC50F452B0322F700A35F6A /* GlowModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlowModifier.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 		1DC50F402B03196000A35F6A /* SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				1DC50F442B0322E700A35F6A /* ViewModifiers */,
 				1DC50F412B03197A00A35F6A /* Views */,
 			);
 			path = SwiftUI;
@@ -92,6 +95,14 @@
 				1DC50F3E2B03139F00A35F6A /* FastingPeriodPlate.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		1DC50F442B0322E700A35F6A /* ViewModifiers */ = {
+			isa = PBXGroup;
+			children = (
+				1DC50F452B0322F700A35F6A /* GlowModifier.swift */,
+			);
+			path = ViewModifiers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -164,6 +175,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1DC50F462B0322F700A35F6A /* GlowModifier.swift in Sources */,
 				1DC50F432B03199600A35F6A /* MainViewModel.swift in Sources */,
 				1DC50F3F2B03139F00A35F6A /* FastingPeriodPlate.swift in Sources */,
 				1DC50F302B030D7300A35F6A /* MainView.swift in Sources */,
