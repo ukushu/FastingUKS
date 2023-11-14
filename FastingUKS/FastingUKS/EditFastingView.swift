@@ -14,21 +14,20 @@ struct EditFastingView : View {
         VStack {
             DatePicker("Date Start:", selection: $dateStart, displayedComponents: .date)
             
-            Space(20)
-            
             HStack {
-                Text("Fasting:")
-                Stepper(label: { Text("\(hrs1)") }, onIncrement: { hrs1 += 1 }, onDecrement: { hrs1 -= 1})
+                LoadTemplateBtn()
+                
+                HStack {
+                    Text("Fasting:")
+                    Stepper(label: { Text("\(hrs1)") }, onIncrement: { hrs1 += 1 }, onDecrement: { hrs1 -= 1})
+                }
+                
+                HStack {
+                    Text("Eating: ")
+                    Stepper(label: { Text("\(hrs2)") }, onIncrement: { hrs2 += 1 }, onDecrement: { hrs2 -= 1})
+                }
             }
-            
-            HStack {
-                Text("Eating: ")
-                Stepper(label: { Text("\(hrs2)") }, onIncrement: { hrs2 += 1 }, onDecrement: { hrs2 -= 1})
-            }
-            
-            Space(20)
-            
-            LoadTemplateBtn()
+            .if((hrs1 + hrs2) % 24 != 0) { $0.foregroundColor(.red) }
             
             Space(20)
             
@@ -42,8 +41,13 @@ struct EditFastingView : View {
     }
     
     func LoadTemplateBtn() -> some View {
-        PopoverButtSimple(label: { Text("Load from template") }) {
+        PopoverButtSimple(label: { Text.sfIcon("square.and.pencil.circle.fill", size: 20) } ) {
             VStack {
+                Text("Templates")
+                    .font(.custom("SF Pro", size: 20))
+                
+                Space(20)
+                
                 HStack(alignment: .top, spacing: 30) {
                     VStack(spacing: 3) {
                         Text("Beginner:")
@@ -77,5 +81,6 @@ struct EditFastingView : View {
             .buttonStyle(BtnUksStyle.default)
             .padding(25)
         }
+        .buttonStyle(BtnUksStyle.default)
     }
 }
