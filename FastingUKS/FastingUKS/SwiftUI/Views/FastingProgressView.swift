@@ -1,11 +1,13 @@
 import SwiftUI
+import MoreSwiftUI
 
 struct FastingProgressView: View {
     let progress: Double
     let fastingType: FastingType
+    let timeLeft: String
     
     var body: some View {
-        CircularProgressView(progress: progress, color: fastingType.color, text: fastingType.rawValue)
+        CircularProgressView(progress: progress, color: fastingType.color, text: fastingType.rawValue, timeLeft: timeLeft)
             .frame(width: 200, height: 200)
     }
 }
@@ -14,6 +16,7 @@ struct CircularProgressView: View {
     let progress: Double
     var color = Color.pink
     var text = ""
+    let timeLeft: String
     
     var body: some View {
         ZStack {
@@ -37,12 +40,19 @@ struct CircularProgressView: View {
                 .animation(.easeOut, value: progress)
             
             VStack {
+                Space(15)
+                
                 Text("Now is")
                     .font(.custom("SFPro", size: 13))
                     .opacity(0.7)
                 
                 Text(text)
                     .font(.custom("SFPro", size: 20))
+                
+                Text(timeLeft)
+                    .font(.custom("SFPro", size: 13))
+                    .opacity(0.7)
+                    .padding(.top, 2)
             }
         }
         .padding(15.5)

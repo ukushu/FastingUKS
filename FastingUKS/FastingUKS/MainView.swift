@@ -11,7 +11,7 @@ struct MainView: View {
         VStack {
             FastingPeriodPlate()
             
-            FastingProgressView(progress: model.progress, fastingType: model.fastingType)
+            FastingProgressView(progress: model.progress, fastingType: model.fastingType, timeLeft: model.timeLeft)
         }
         .frame(minWidth: 250, idealWidth: 250, minHeight: 280, idealHeight: 280)
         .makeFullyIntaractable()

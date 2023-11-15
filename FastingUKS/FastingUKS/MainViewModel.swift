@@ -8,6 +8,7 @@ class MainViewModel: ObservableObject {
     
     @Published var progress: Double = 0.0
     @Published var fastingType: FastingType = .Eating
+    @Published var timeLeft: String = ""
     
     private init() {
         refresh()
@@ -23,6 +24,8 @@ class MainViewModel: ObservableObject {
         self.progress = Double(hours % 24) / 24
         // for 24/24
         self.fastingType = hours/24 % 2 == 0 ? .Fasting : .Eating
+        
+        self.timeLeft = "\(hours / 24):\( 60 - Date.now.minute ) left"
     }
 }
 
