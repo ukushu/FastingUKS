@@ -13,11 +13,13 @@ struct MainView: View {
             
             FastingProgressView(progress: model.progress, fastingType: model.fastingType)
         }
-        .frame(minWidth: 250, minHeight: 280)
+        .frame(minWidth: 250, idealWidth: 250, minHeight: 280, idealHeight: 280)
         .makeFullyIntaractable()
         .gesture( TapGesture(count: 2).onEnded { twoTaps() } )
         .sheet(sheet: model.sheet)
-        .onReceive(timer) { _ in model.objectWillChange.send() }
+        .onReceive(timer) { _ in
+            model.refresh()
+        }
     }
 }
 
