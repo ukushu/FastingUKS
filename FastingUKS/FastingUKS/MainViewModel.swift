@@ -25,7 +25,7 @@ class MainViewModel: ObservableObject {
         // for 24/24
         self.fastingType = hours/24 % 2 == 0 ? .Fasting : .Eating
         
-        self.timeLeft = "\(hours / 24):\( 60 - Date.now.minute ) left"
+        self.timeLeft = "\(24 - Date.now.hour):\( 60 - Date.now.minute ) left"
     }
 }
 

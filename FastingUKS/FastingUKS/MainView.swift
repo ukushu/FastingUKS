@@ -13,13 +13,16 @@ struct MainView: View {
             
             FastingProgressView(progress: model.progress, fastingType: model.fastingType, timeLeft: model.timeLeft)
         }
-        .frame(minWidth: 250, idealWidth: 250, minHeight: 280, idealHeight: 280)
         .makeFullyIntaractable()
         .gesture( TapGesture(count: 2).onEnded { twoTaps() } )
         .sheet(sheet: model.sheet)
         .onReceive(timer) { _ in
             model.refresh()
         }
+        .fillParent()
+        .backgroundGaussianBlur(type: .behindWindow, material: .m1_hudWindow)
+        .frame(minWidth: 250, idealWidth: 250, minHeight: 280, idealHeight: 280)
+        
     }
 }
 

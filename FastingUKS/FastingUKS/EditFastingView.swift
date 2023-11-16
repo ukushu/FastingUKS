@@ -10,6 +10,8 @@ struct EditFastingView : View {
     
     @State var dateStart = Date.now
     
+    var submitDisabled: Bool { (hrs1 + hrs2) % 24 != 0 }
+    
     var body: some View {
         VStack {
             DatePicker("Date Start:", selection: $dateStart, displayedComponents: .date)
@@ -27,7 +29,7 @@ struct EditFastingView : View {
                     Stepper(label: { Text("\(hrs2)") }, onIncrement: { hrs2 += 1 }, onDecrement: { hrs2 -= 1})
                 }
             }
-            .if((hrs1 + hrs2) % 24 != 0) { $0.foregroundColor(.red) }
+            .if(submitDisabled) { $0.foregroundColor(.red) }
             
             Space(20)
             
@@ -35,6 +37,7 @@ struct EditFastingView : View {
                 Button("Cancel", role: .cancel) { model.sheet = .none }
                 
                 Button("OK") { model.sheet = .none }
+                    .disabled(submitDisabled)
             }
         }
         .padding(25)
@@ -55,15 +58,16 @@ struct EditFastingView : View {
                         Button("13:11") { hrs1 = 13; hrs2 = 11; }
                         Button("14:10") { hrs1 = 14; hrs2 = 10; }
                         Button("15:9")  { hrs1 = 15; hrs2 = 9; }
-                        Button("24:24") { hrs1 = 24; hrs2 = 24; }
                     }
                     
                     VStack(spacing: 3) {
                         Text("Experienced:")
                         
+                        
+                        Button("24:24") { hrs1 = 24; hrs2 = 24; }
+                        
                         Button("48:120*") { hrs1 = 48; hrs2 = 120; }
                             .help("Fast 2 days a week")
-                        
                         Button("16:8") { hrs1 = 16; hrs2 = 8; }
                         Button("17:7") { hrs1 = 17; hrs2 = 7; }
                         Button("18:6") { hrs1 = 18; hrs2 = 6; }

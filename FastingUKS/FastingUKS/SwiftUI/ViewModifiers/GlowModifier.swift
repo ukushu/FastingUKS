@@ -6,16 +6,28 @@ struct GlowModifier: ViewModifier {
     var duration: CGFloat = 1
     @State private var flag = false
     
+    var animation: Animation {
+        [
+            Animation.easeIn(duration: duration),
+            Animation.easeInOut(duration: duration),
+            Animation.easeOut(duration: duration),
+            Animation.linear(duration: duration),
+        ]
+        .randomElement()!
+        .repeatForever()
+    }
+    
     func body(content: Content) -> some View {
-        ZStack {
-            content
-                .blur(radius: flag ? radius : 0)
-                .animation(.easeInOut(duration: duration).repeatForever(), value: flag)
-                .onAppear {
-                    flag.toggle()
-                }
-            
-            content
-        }
+        content
+            .background {
+                content
+                    .padding(.top, flag ? 0 : radius )
+                    .opacity(flag ? 1 : 0 )
+                    .blur(radius: flag ? radius : 0)
+                    .animation(animation, value: flag)
+                    .onAppear {
+                        flag.toggle()
+                    }
+            }
     }
 }

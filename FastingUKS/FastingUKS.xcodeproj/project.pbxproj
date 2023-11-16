@@ -17,6 +17,7 @@
 		1DC50F462B0322F700A35F6A /* GlowModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC50F452B0322F700A35F6A /* GlowModifier.swift */; };
 		1DC50F492B0324F900A35F6A /* MoreSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 1DC50F482B0324F900A35F6A /* MoreSwiftUI */; };
 		1DC50F4B2B032EE300A35F6A /* EditFastingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC50F4A2B032EE300A35F6A /* EditFastingView.swift */; };
+		1DC50FAD2B05BEB000A35F6A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC50FAC2B05BEB000A35F6A /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		1DC50F422B03199600A35F6A /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		1DC50F452B0322F700A35F6A /* GlowModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlowModifier.swift; sourceTree = "<group>"; };
 		1DC50F4A2B032EE300A35F6A /* EditFastingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditFastingView.swift; sourceTree = "<group>"; };
+		1DC50FAC2B05BEB000A35F6A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 				1DC50F312B030D7400A35F6A /* Assets.xcassets */,
 				1DC50F332B030D7400A35F6A /* FastingUKS.entitlements */,
 				1DC50F342B030D7400A35F6A /* Preview Content */,
+				1DC50FAC2B05BEB000A35F6A /* AppDelegate.swift */,
 			);
 			path = FastingUKS;
 			sourceTree = "<group>";
@@ -186,6 +189,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1DC50FAD2B05BEB000A35F6A /* AppDelegate.swift in Sources */,
 				1DC50F462B0322F700A35F6A /* GlowModifier.swift in Sources */,
 				1DC50F432B03199600A35F6A /* MainViewModel.swift in Sources */,
 				1DC50F3F2B03139F00A35F6A /* FastingPeriodPlate.swift in Sources */,
