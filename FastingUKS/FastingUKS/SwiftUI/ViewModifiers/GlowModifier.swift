@@ -31,3 +31,4 @@ struct GlowModifier: ViewModifier {
             }
     }
 }
+
